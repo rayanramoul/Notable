@@ -38,7 +38,7 @@ class population():
         self.people = self.generate()
         i=0
         while i<max_iterations:
-            print("NEW GENERATION "+str(i))
+            print("GENERATION "+str(i))
             for j in self.people:
                 j.learn(self.learnX, self.learnY, self.validationX, self.validationY)
             self.mutation()
