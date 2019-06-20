@@ -1,5 +1,5 @@
 from ui.app import app 
-from backend.population import population
+from backend.Population import Population
 
-pop = population()
+pop = Population()
 #main = app()
