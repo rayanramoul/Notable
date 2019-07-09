@@ -1,0 +1,1098 @@
+
+	MODEL
+Sequential(
+  (0): Linear(in_features=30, out_features=175, bias=True)
+  (1): Sigmoid()
+  (2): Linear(in_features=175, out_features=71, bias=True)
+  (3): Sigmoid()
+  (4): Linear(in_features=71, out_features=142, bias=True)
+  (5): Sigmoid()
+  (6): Linear(in_features=142, out_features=136, bias=True)
+  (7): ReLU()
+  (8): Linear(in_features=136, out_features=167, bias=True)
+  (9): Sigmoid()
+  (10): Linear(in_features=167, out_features=64, bias=True)
+  (11): Tanh()
+  (12): Linear(in_features=64, out_features=103, bias=True)
+  (13): ReLU()
+  (14): Linear(in_features=103, out_features=162, bias=True)
+  (15): Sigmoid()
+  (16): Linear(in_features=162, out_features=174, bias=True)
+  (17): Sigmoid()
+  (18): Linear(in_features=174, out_features=111, bias=True)
+  (19): ReLU()
+  (20): Linear(in_features=111, out_features=15, bias=True)
+  (21): LeakyReLU(negative_slope=0.01)
+  (22): Linear(in_features=15, out_features=1, bias=True)
+  (23): Sigmoid()
+)LEARNING RATE : 9.585171234706372e-06	EPOCHS : 100
+OPTIMIZER : SGD (
+Parameter Group 0
+    dampening: 0
+    lr: 9.585171234706372e-06
+    momentum: 0
+    nesterov: False
+    weight_decay: 0
+)
+SCORE : 0.9988500000000001
+MEAN ACCURACY : 0.9988500000000002
+MEAN PRECISION : 0.9988500000000002
+BEST ACCURACY : 0.99885
+WORST ACCURACY  : 0.99885
+BEST PRECISION  : 0.99885
+WORST PRECISION : 0.99885
+
+
+	MODEL
+Sequential(
+  (0): Linear(in_features=30, out_features=110, bias=True)
+  (1): LeakyReLU(negative_slope=0.01)
+  (2): Linear(in_features=110, out_features=173, bias=True)
+  (3): LeakyReLU(negative_slope=0.01)
+  (4): Linear(in_features=173, out_features=60, bias=True)
+  (5): ReLU()
+  (6): Linear(in_features=60, out_features=191, bias=True)
+  (7): Sigmoid()
+  (8): Linear(in_features=191, out_features=133, bias=True)
+  (9): Tanh()
+  (10): Linear(in_features=133, out_features=56, bias=True)
+  (11): Sigmoid()
+  (12): Linear(in_features=56, out_features=151, bias=True)
+  (13): Sigmoid()
+  (14): Linear(in_features=151, out_features=91, bias=True)
+  (15): ReLU()
+  (16): Linear(in_features=91, out_features=137, bias=True)
+  (17): LeakyReLU(negative_slope=0.01)
+  (18): Linear(in_features=137, out_features=2, bias=True)
+  (19): ReLU()
+  (20): Linear(in_features=2, out_features=125, bias=True)
+  (21): LeakyReLU(negative_slope=0.01)
+  (22): Linear(in_features=125, out_features=173, bias=True)
+  (23): Sigmoid()
+  (24): Linear(in_features=173, out_features=38, bias=True)
+  (25): Tanh()
+  (26): Linear(in_features=38, out_features=6, bias=True)
+  (27): LeakyReLU(negative_slope=0.01)
+  (28): Linear(in_features=6, out_features=1, bias=True)
+  (29): Sigmoid()
+)LEARNING RATE : 5.582049294960973e-06	EPOCHS : 100
+OPTIMIZER : SGD (
+Parameter Group 0
+    dampening: 0
+    lr: 5.582049294960973e-06
+    momentum: 0
+    nesterov: False
+    weight_decay: 0
+)
+SCORE : 0.9988500000000001
+MEAN ACCURACY : 0.9988500000000002
+MEAN PRECISION : 0.9988500000000002
+BEST ACCURACY : 0.99885
+WORST ACCURACY  : 0.99885
+BEST PRECISION  : 0.99885
+WORST PRECISION : 0.99885
+
+
+	MODEL
+Sequential(
+  (0): Linear(in_features=30, out_features=163, bias=True)
+  (1): Sigmoid()
+  (2): Linear(in_features=163, out_features=115, bias=True)
+  (3): LeakyReLU(negative_slope=0.01)
+  (4): Linear(in_features=115, out_features=194, bias=True)
+  (5): Tanh()
+  (6): Linear(in_features=194, out_features=14, bias=True)
+  (7): ReLU()
+  (8): Linear(in_features=14, out_features=200, bias=True)
+  (9): Sigmoid()
+  (10): Linear(in_features=200, out_features=56, bias=True)
+  (11): ReLU()
+  (12): Linear(in_features=56, out_features=66, bias=True)
+  (13): ReLU()
+  (14): Linear(in_features=66, out_features=191, bias=True)
+  (15): LeakyReLU(negative_slope=0.01)
+  (16): Linear(in_features=191, out_features=36, bias=True)
+  (17): ReLU()
+  (18): Linear(in_features=36, out_features=92, bias=True)
+  (19): ReLU()
+  (20): Linear(in_features=92, out_features=55, bias=True)
+  (21): Tanh()
+  (22): Linear(in_features=55, out_features=100, bias=True)
+  (23): LeakyReLU(negative_slope=0.01)
+  (24): Linear(in_features=100, out_features=49, bias=True)
+  (25): Sigmoid()
+  (26): Linear(in_features=49, out_features=185, bias=True)
+  (27): ReLU()
+  (28): Linear(in_features=185, out_features=172, bias=True)
+  (29): LeakyReLU(negative_slope=0.01)
+  (30): Linear(in_features=172, out_features=43, bias=True)
+  (31): LeakyReLU(negative_slope=0.01)
+  (32): Linear(in_features=43, out_features=167, bias=True)
+  (33): LeakyReLU(negative_slope=0.01)
+  (34): Linear(in_features=167, out_features=1, bias=True)
+  (35): Sigmoid()
+)LEARNING RATE : 7.864281377576859e-06	EPOCHS : 100
+OPTIMIZER : SGD (
+Parameter Group 0
+    dampening: 0
+    lr: 7.864281377576859e-06
+    momentum: 0
+    nesterov: False
+    weight_decay: 0
+)
+SCORE : 0.9988500000000001
+MEAN ACCURACY : 0.9988500000000002
+MEAN PRECISION : 0.9988500000000002
+BEST ACCURACY : 0.99885
+WORST ACCURACY  : 0.99885
+BEST PRECISION  : 0.99885
+WORST PRECISION : 0.99885
+
+
+	MODEL
+Sequential(
+  (0): Linear(in_features=30, out_features=46, bias=True)
+  (1): Tanh()
+  (2): Linear(in_features=46, out_features=52, bias=True)
+  (3): LeakyReLU(negative_slope=0.01)
+  (4): Linear(in_features=52, out_features=169, bias=True)
+  (5): Tanh()
+  (6): Linear(in_features=169, out_features=191, bias=True)
+  (7): Sigmoid()
+  (8): Linear(in_features=191, out_features=144, bias=True)
+  (9): Tanh()
+  (10): Linear(in_features=144, out_features=154, bias=True)
+  (11): Sigmoid()
+  (12): Linear(in_features=154, out_features=1, bias=True)
+  (13): Sigmoid()
+)LEARNING RATE : 2.3138770527192345e-06	EPOCHS : 100
+OPTIMIZER : LBFGS (
+Parameter Group 0
+    history_size: 100
+    line_search_fn: None
+    lr: 2.3138770527192345e-06
+    max_eval: 25
+    max_iter: 20
+    tolerance_change: 1e-09
+    tolerance_grad: 1e-05
+)
+SCORE : 0.0011499999999999998
+MEAN ACCURACY : 0.0011499999999999995
+MEAN PRECISION : 0.0011499999999999995
+BEST ACCURACY : 0.00115
+WORST ACCURACY  : 0.00115
+BEST PRECISION  : 0.00115
+WORST PRECISION : 0.00115
+
+
+	MODEL
+Sequential(
+  (0): Linear(in_features=30, out_features=41, bias=True)
+  (1): ReLU()
+  (2): Linear(in_features=41, out_features=10, bias=True)
+  (3): Tanh()
+  (4): Linear(in_features=10, out_features=141, bias=True)
+  (5): ReLU()
+  (6): Linear(in_features=141, out_features=69, bias=True)
+  (7): Tanh()
+  (8): Linear(in_features=69, out_features=161, bias=True)
+  (9): Sigmoid()
+  (10): Linear(in_features=161, out_features=95, bias=True)
+  (11): Sigmoid()
+  (12): Linear(in_features=95, out_features=175, bias=True)
+  (13): LeakyReLU(negative_slope=0.01)
+  (14): Linear(in_features=175, out_features=34, bias=True)
+  (15): LeakyReLU(negative_slope=0.01)
+  (16): Linear(in_features=34, out_features=11, bias=True)
+  (17): Tanh()
+  (18): Linear(in_features=11, out_features=191, bias=True)
+  (19): LeakyReLU(negative_slope=0.01)
+  (20): Linear(in_features=191, out_features=47, bias=True)
+  (21): Sigmoid()
+  (22): Linear(in_features=47, out_features=198, bias=True)
+  (23): Tanh()
+  (24): Linear(in_features=198, out_features=1, bias=True)
+  (25): Sigmoid()
+)LEARNING RATE : 1.5142368530655108e-06	EPOCHS : 100
+OPTIMIZER : Rprop (
+Parameter Group 0
+    etas: (0.5, 1.2)
+    lr: 1.5142368530655108e-06
+    step_sizes: (1e-06, 50)
+)
+SCORE : 0.48975822222222215
+MEAN ACCURACY : 0.4676246666666665
+MEAN PRECISION : 0.4676246666666665
+BEST ACCURACY : 0.99925
+WORST ACCURACY  : 0.0024
+BEST PRECISION  : 0.99925
+WORST PRECISION : 0.0024
+
+
+	MODEL
+Sequential(
+  (0): Linear(in_features=30, out_features=144, bias=True)
+  (1): Sigmoid()
+  (2): Linear(in_features=144, out_features=174, bias=True)
+  (3): LeakyReLU(negative_slope=0.01)
+  (4): Linear(in_features=174, out_features=192, bias=True)
+  (5): Tanh()
+  (6): Linear(in_features=192, out_features=51, bias=True)
+  (7): Sigmoid()
+  (8): Linear(in_features=51, out_features=4, bias=True)
+  (9): ReLU()
+  (10): Linear(in_features=4, out_features=172, bias=True)
+  (11): Tanh()
+  (12): Linear(in_features=172, out_features=85, bias=True)
+  (13): Sigmoid()
+  (14): Linear(in_features=85, out_features=90, bias=True)
+  (15): LeakyReLU(negative_slope=0.01)
+  (16): Linear(in_features=90, out_features=14, bias=True)
+  (17): Tanh()
+  (18): Linear(in_features=14, out_features=55, bias=True)
+  (19): Tanh()
+  (20): Linear(in_features=55, out_features=122, bias=True)
+  (21): ReLU()
+  (22): Linear(in_features=122, out_features=174, bias=True)
+  (23): Sigmoid()
+  (24): Linear(in_features=174, out_features=35, bias=True)
+  (25): Sigmoid()
+  (26): Linear(in_features=35, out_features=69, bias=True)
+  (27): Tanh()
+  (28): Linear(in_features=69, out_features=33, bias=True)
+  (29): LeakyReLU(negative_slope=0.01)
+  (30): Linear(in_features=33, out_features=180, bias=True)
+  (31): Sigmoid()
+  (32): Linear(in_features=180, out_features=1, bias=True)
+  (33): Sigmoid()
+)LEARNING RATE : 8.745431422706484e-06	EPOCHS : 100
+OPTIMIZER : Rprop (
+Parameter Group 0
+    etas: (0.5, 1.2)
+    lr: 8.745431422706484e-06
+    step_sizes: (1e-06, 50)
+)
+SCORE : 0.999348
+MEAN ACCURACY : 0.999344
+MEAN PRECISION : 0.999344
+BEST ACCURACY : 0.99943
+WORST ACCURACY  : 0.99927
+BEST PRECISION  : 0.99943
+WORST PRECISION : 0.99927
+
+
+	MODEL
+Sequential(
+  (0): Linear(in_features=30, out_features=162, bias=True)
+  (1): Tanh()
+  (2): Linear(in_features=162, out_features=171, bias=True)
+  (3): ReLU()
+  (4): Linear(in_features=171, out_features=171, bias=True)
+  (5): LeakyReLU(negative_slope=0.01)
+  (6): Linear(in_features=171, out_features=114, bias=True)
+  (7): LeakyReLU(negative_slope=0.01)
+  (8): Linear(in_features=114, out_features=78, bias=True)
+  (9): Sigmoid()
+  (10): Linear(in_features=78, out_features=12, bias=True)
+  (11): LeakyReLU(negative_slope=0.01)
+  (12): Linear(in_features=12, out_features=149, bias=True)
+  (13): Tanh()
+  (14): Linear(in_features=149, out_features=191, bias=True)
+  (15): Sigmoid()
+  (16): Linear(in_features=191, out_features=1, bias=True)
+  (17): Sigmoid()
+)LEARNING RATE : 3.487326028174563e-06	EPOCHS : 100
+OPTIMIZER : LBFGS (
+Parameter Group 0
+    history_size: 100
+    line_search_fn: None
+    lr: 3.487326028174563e-06
+    max_eval: 25
+    max_iter: 20
+    tolerance_change: 1e-09
+    tolerance_grad: 1e-05
+)
+SCORE : 0.9988500000000001
+MEAN ACCURACY : 0.9988500000000002
+MEAN PRECISION : 0.9988500000000002
+BEST ACCURACY : 0.99885
+WORST ACCURACY  : 0.99885
+BEST PRECISION  : 0.99885
+WORST PRECISION : 0.99885
+
+
+	MODEL
+Sequential(
+  (0): Linear(in_features=30, out_features=153, bias=True)
+  (1): ReLU()
+  (2): Linear(in_features=153, out_features=16, bias=True)
+  (3): LeakyReLU(negative_slope=0.01)
+  (4): Linear(in_features=16, out_features=105, bias=True)
+  (5): ReLU()
+  (6): Linear(in_features=105, out_features=71, bias=True)
+  (7): ReLU()
+  (8): Linear(in_features=71, out_features=25, bias=True)
+  (9): ReLU()
+  (10): Linear(in_features=25, out_features=68, bias=True)
+  (11): Tanh()
+  (12): Linear(in_features=68, out_features=1, bias=True)
+  (13): Sigmoid()
+)LEARNING RATE : 1.3215617314499748e-06	EPOCHS : 100
+OPTIMIZER : Rprop (
+Parameter Group 0
+    etas: (0.5, 1.2)
+    lr: 1.3215617314499748e-06
+    step_sizes: (1e-06, 50)
+)
+SCORE : 0.999269
+MEAN ACCURACY : 0.9992570000000001
+MEAN PRECISION : 0.9992570000000001
+BEST ACCURACY : 0.99939
+WORST ACCURACY  : 0.99916
+BEST PRECISION  : 0.99939
+WORST PRECISION : 0.99916
+
+
+	MODEL
+Sequential(
+  (0): Linear(in_features=30, out_features=180, bias=True)
+  (1): Sigmoid()
+  (2): Linear(in_features=180, out_features=99, bias=True)
+  (3): LeakyReLU(negative_slope=0.01)
+  (4): Linear(in_features=99, out_features=65, bias=True)
+  (5): Tanh()
+  (6): Linear(in_features=65, out_features=15, bias=True)
+  (7): Tanh()
+  (8): Linear(in_features=15, out_features=129, bias=True)
+  (9): LeakyReLU(negative_slope=0.01)
+  (10): Linear(in_features=129, out_features=133, bias=True)
+  (11): ReLU()
+  (12): Linear(in_features=133, out_features=123, bias=True)
+  (13): LeakyReLU(negative_slope=0.01)
+  (14): Linear(in_features=123, out_features=134, bias=True)
+  (15): LeakyReLU(negative_slope=0.01)
+  (16): Linear(in_features=134, out_features=120, bias=True)
+  (17): Sigmoid()
+  (18): Linear(in_features=120, out_features=74, bias=True)
+  (19): LeakyReLU(negative_slope=0.01)
+  (20): Linear(in_features=74, out_features=90, bias=True)
+  (21): Tanh()
+  (22): Linear(in_features=90, out_features=182, bias=True)
+  (23): LeakyReLU(negative_slope=0.01)
+  (24): Linear(in_features=182, out_features=1, bias=True)
+  (25): Sigmoid()
+)LEARNING RATE : 9.11956028518896e-06	EPOCHS : 100
+OPTIMIZER : SGD (
+Parameter Group 0
+    dampening: 0
+    lr: 9.11956028518896e-06
+    momentum: 0
+    nesterov: False
+    weight_decay: 0
+)
+SCORE : 0.9988500000000001
+MEAN ACCURACY : 0.9988500000000002
+MEAN PRECISION : 0.9988500000000002
+BEST ACCURACY : 0.99885
+WORST ACCURACY  : 0.99885
+BEST PRECISION  : 0.99885
+WORST PRECISION : 0.99885
+
+
+	MODEL
+Sequential(
+  (0): Linear(in_features=30, out_features=136, bias=True)
+  (1): Tanh()
+  (2): Linear(in_features=136, out_features=182, bias=True)
+  (3): LeakyReLU(negative_slope=0.01)
+  (4): Linear(in_features=182, out_features=37, bias=True)
+  (5): ReLU()
+  (6): Linear(in_features=37, out_features=190, bias=True)
+  (7): ReLU()
+  (8): Linear(in_features=190, out_features=1, bias=True)
+  (9): Sigmoid()
+)LEARNING RATE : 9.796979886840408e-06	EPOCHS : 100
+OPTIMIZER : LBFGS (
+Parameter Group 0
+    history_size: 100
+    line_search_fn: None
+    lr: 9.796979886840408e-06
+    max_eval: 25
+    max_iter: 20
+    tolerance_change: 1e-09
+    tolerance_grad: 1e-05
+)
+SCORE : 0.0011599999999999998
+MEAN ACCURACY : 0.0011600000000000002
+MEAN PRECISION : 0.0011600000000000002
+BEST ACCURACY : 0.00116
+WORST ACCURACY  : 0.00116
+BEST PRECISION  : 0.00116
+WORST PRECISION : 0.00116
+
+
+	MODEL
+Sequential(
+  (0): Linear(in_features=30, out_features=40, bias=True)
+  (1): ReLU()
+  (2): Linear(in_features=40, out_features=63, bias=True)
+  (3): Sigmoid()
+  (4): Linear(in_features=63, out_features=135, bias=True)
+  (5): LeakyReLU(negative_slope=0.01)
+  (6): Linear(in_features=135, out_features=147, bias=True)
+  (7): LeakyReLU(negative_slope=0.01)
+  (8): Linear(in_features=147, out_features=124, bias=True)
+  (9): LeakyReLU(negative_slope=0.01)
+  (10): Linear(in_features=124, out_features=193, bias=True)
+  (11): ReLU()
+  (12): Linear(in_features=193, out_features=97, bias=True)
+  (13): LeakyReLU(negative_slope=0.01)
+  (14): Linear(in_features=97, out_features=55, bias=True)
+  (15): Tanh()
+  (16): Linear(in_features=55, out_features=23, bias=True)
+  (17): LeakyReLU(negative_slope=0.01)
+  (18): Linear(in_features=23, out_features=58, bias=True)
+  (19): Tanh()
+  (20): Linear(in_features=58, out_features=188, bias=True)
+  (21): LeakyReLU(negative_slope=0.01)
+  (22): Linear(in_features=188, out_features=31, bias=True)
+  (23): LeakyReLU(negative_slope=0.01)
+  (24): Linear(in_features=31, out_features=37, bias=True)
+  (25): Tanh()
+  (26): Linear(in_features=37, out_features=1, bias=True)
+  (27): Sigmoid()
+)LEARNING RATE : 5.854891298295143e-06	EPOCHS : 100
+OPTIMIZER : Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    lr: 5.854891298295143e-06
+    weight_decay: 0
+)
+SCORE : 0.999247111111111
+MEAN ACCURACY : 0.999411333333333
+MEAN PRECISION : 0.999411333333333
+BEST ACCURACY : 0.99948
+WORST ACCURACY  : 0.99885
+BEST PRECISION  : 0.99948
+WORST PRECISION : 0.99885
+
+
+	MODEL
+Sequential(
+  (0): Linear(in_features=30, out_features=8, bias=True)
+  (1): LeakyReLU(negative_slope=0.01)
+  (2): Linear(in_features=8, out_features=7, bias=True)
+  (3): Tanh()
+  (4): Linear(in_features=7, out_features=6, bias=True)
+  (5): LeakyReLU(negative_slope=0.01)
+  (6): Linear(in_features=6, out_features=200, bias=True)
+  (7): ReLU()
+  (8): Linear(in_features=200, out_features=184, bias=True)
+  (9): ReLU()
+  (10): Linear(in_features=184, out_features=136, bias=True)
+  (11): Tanh()
+  (12): Linear(in_features=136, out_features=86, bias=True)
+  (13): Sigmoid()
+  (14): Linear(in_features=86, out_features=1, bias=True)
+  (15): Sigmoid()
+)LEARNING RATE : 1.711912601495505e-06	EPOCHS : 100
+OPTIMIZER : LBFGS (
+Parameter Group 0
+    history_size: 100
+    line_search_fn: None
+    lr: 1.711912601495505e-06
+    max_eval: 25
+    max_iter: 20
+    tolerance_change: 1e-09
+    tolerance_grad: 1e-05
+)
+SCORE : 0.9988500000000001
+MEAN ACCURACY : 0.9988500000000002
+MEAN PRECISION : 0.9988500000000002
+BEST ACCURACY : 0.99885
+WORST ACCURACY  : 0.99885
+BEST PRECISION  : 0.99885
+WORST PRECISION : 0.99885
+
+
+	MODEL
+Sequential(
+  (0): Linear(in_features=30, out_features=36, bias=True)
+  (1): Sigmoid()
+  (2): Linear(in_features=36, out_features=55, bias=True)
+  (3): LeakyReLU(negative_slope=0.01)
+  (4): Linear(in_features=55, out_features=181, bias=True)
+  (5): LeakyReLU(negative_slope=0.01)
+  (6): Linear(in_features=181, out_features=197, bias=True)
+  (7): Sigmoid()
+  (8): Linear(in_features=197, out_features=172, bias=True)
+  (9): LeakyReLU(negative_slope=0.01)
+  (10): Linear(in_features=172, out_features=111, bias=True)
+  (11): ReLU()
+  (12): Linear(in_features=111, out_features=126, bias=True)
+  (13): LeakyReLU(negative_slope=0.01)
+  (14): Linear(in_features=126, out_features=198, bias=True)
+  (15): LeakyReLU(negative_slope=0.01)
+  (16): Linear(in_features=198, out_features=1, bias=True)
+  (17): Sigmoid()
+)LEARNING RATE : 4.5495511126607206e-06	EPOCHS : 100
+OPTIMIZER : LBFGS (
+Parameter Group 0
+    history_size: 100
+    line_search_fn: None
+    lr: 4.5495511126607206e-06
+    max_eval: 25
+    max_iter: 20
+    tolerance_change: 1e-09
+    tolerance_grad: 1e-05
+)
+SCORE : 0.0011499999999999998
+MEAN ACCURACY : 0.0011499999999999995
+MEAN PRECISION : 0.0011499999999999995
+BEST ACCURACY : 0.00115
+WORST ACCURACY  : 0.00115
+BEST PRECISION  : 0.00115
+WORST PRECISION : 0.00115
+
+
+	MODEL
+Sequential(
+  (0): Linear(in_features=30, out_features=101, bias=True)
+  (1): ReLU()
+  (2): Linear(in_features=101, out_features=138, bias=True)
+  (3): ReLU()
+  (4): Linear(in_features=138, out_features=106, bias=True)
+  (5): Sigmoid()
+  (6): Linear(in_features=106, out_features=16, bias=True)
+  (7): Sigmoid()
+  (8): Linear(in_features=16, out_features=20, bias=True)
+  (9): ReLU()
+  (10): Linear(in_features=20, out_features=182, bias=True)
+  (11): ReLU()
+  (12): Linear(in_features=182, out_features=63, bias=True)
+  (13): ReLU()
+  (14): Linear(in_features=63, out_features=17, bias=True)
+  (15): LeakyReLU(negative_slope=0.01)
+  (16): Linear(in_features=17, out_features=197, bias=True)
+  (17): LeakyReLU(negative_slope=0.01)
+  (18): Linear(in_features=197, out_features=35, bias=True)
+  (19): LeakyReLU(negative_slope=0.01)
+  (20): Linear(in_features=35, out_features=190, bias=True)
+  (21): LeakyReLU(negative_slope=0.01)
+  (22): Linear(in_features=190, out_features=134, bias=True)
+  (23): Tanh()
+  (24): Linear(in_features=134, out_features=132, bias=True)
+  (25): ReLU()
+  (26): Linear(in_features=132, out_features=116, bias=True)
+  (27): Tanh()
+  (28): Linear(in_features=116, out_features=7, bias=True)
+  (29): LeakyReLU(negative_slope=0.01)
+  (30): Linear(in_features=7, out_features=38, bias=True)
+  (31): Sigmoid()
+  (32): Linear(in_features=38, out_features=99, bias=True)
+  (33): ReLU()
+  (34): Linear(in_features=99, out_features=95, bias=True)
+  (35): Tanh()
+  (36): Linear(in_features=95, out_features=65, bias=True)
+  (37): Tanh()
+  (38): Linear(in_features=65, out_features=1, bias=True)
+  (39): Sigmoid()
+)LEARNING RATE : 4.35245866306892e-06	EPOCHS : 100
+OPTIMIZER : Rprop (
+Parameter Group 0
+    etas: (0.5, 1.2)
+    lr: 4.35245866306892e-06
+    step_sizes: (1e-06, 50)
+)
+SCORE : 0.9992061111111111
+MEAN ACCURACY : 0.9992383333333332
+MEAN PRECISION : 0.9992383333333332
+BEST ACCURACY : 0.99933
+WORST ACCURACY  : 0.99905
+BEST PRECISION  : 0.99933
+WORST PRECISION : 0.99905
+
+
+	MODEL
+Sequential(
+  (0): Linear(in_features=30, out_features=104, bias=True)
+  (1): LeakyReLU(negative_slope=0.01)
+  (2): Linear(in_features=104, out_features=190, bias=True)
+  (3): LeakyReLU(negative_slope=0.01)
+  (4): Linear(in_features=190, out_features=29, bias=True)
+  (5): ReLU()
+  (6): Linear(in_features=29, out_features=149, bias=True)
+  (7): Sigmoid()
+  (8): Linear(in_features=149, out_features=145, bias=True)
+  (9): Tanh()
+  (10): Linear(in_features=145, out_features=82, bias=True)
+  (11): Tanh()
+  (12): Linear(in_features=82, out_features=38, bias=True)
+  (13): LeakyReLU(negative_slope=0.01)
+  (14): Linear(in_features=38, out_features=93, bias=True)
+  (15): Tanh()
+  (16): Linear(in_features=93, out_features=175, bias=True)
+  (17): ReLU()
+  (18): Linear(in_features=175, out_features=107, bias=True)
+  (19): Sigmoid()
+  (20): Linear(in_features=107, out_features=107, bias=True)
+  (21): ReLU()
+  (22): Linear(in_features=107, out_features=19, bias=True)
+  (23): Tanh()
+  (24): Linear(in_features=19, out_features=14, bias=True)
+  (25): LeakyReLU(negative_slope=0.01)
+  (26): Linear(in_features=14, out_features=139, bias=True)
+  (27): ReLU()
+  (28): Linear(in_features=139, out_features=114, bias=True)
+  (29): ReLU()
+  (30): Linear(in_features=114, out_features=9, bias=True)
+  (31): ReLU()
+  (32): Linear(in_features=9, out_features=51, bias=True)
+  (33): LeakyReLU(negative_slope=0.01)
+  (34): Linear(in_features=51, out_features=19, bias=True)
+  (35): LeakyReLU(negative_slope=0.01)
+  (36): Linear(in_features=19, out_features=119, bias=True)
+  (37): LeakyReLU(negative_slope=0.01)
+  (38): Linear(in_features=119, out_features=1, bias=True)
+  (39): Sigmoid()
+)LEARNING RATE : 4.177315715553602e-07	EPOCHS : 100
+OPTIMIZER : Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    lr: 4.177315715553602e-07
+    weight_decay: 0
+)
+SCORE : 0.6441122222222223
+MEAN ACCURACY : 0.9323366666666668
+MEAN PRECISION : 0.9323366666666668
+BEST ACCURACY : 0.99885
+WORST ACCURACY  : 0.00115
+BEST PRECISION  : 0.99885
+WORST PRECISION : 0.00115
+
+
+	MODEL
+Sequential(
+  (0): Linear(in_features=30, out_features=136, bias=True)
+  (1): LeakyReLU(negative_slope=0.01)
+  (2): Linear(in_features=136, out_features=48, bias=True)
+  (3): Sigmoid()
+  (4): Linear(in_features=48, out_features=1, bias=True)
+  (5): Sigmoid()
+)LEARNING RATE : 4.123932778461553e-06	EPOCHS : 100
+OPTIMIZER : SGD (
+Parameter Group 0
+    dampening: 0
+    lr: 4.123932778461553e-06
+    momentum: 0
+    nesterov: False
+    weight_decay: 0
+)
+SCORE : 0.9991331111111111
+MEAN ACCURACY : 0.9991193333333336
+MEAN PRECISION : 0.9991193333333336
+BEST ACCURACY : 0.99943
+WORST ACCURACY  : 0.99885
+BEST PRECISION  : 0.99943
+WORST PRECISION : 0.99885
+
+
+	MODEL
+Sequential(
+  (0): Linear(in_features=30, out_features=126, bias=True)
+  (1): ReLU()
+  (2): Linear(in_features=126, out_features=136, bias=True)
+  (3): Sigmoid()
+  (4): Linear(in_features=136, out_features=29, bias=True)
+  (5): Sigmoid()
+  (6): Linear(in_features=29, out_features=1, bias=True)
+  (7): Sigmoid()
+)LEARNING RATE : 2.267723980051555e-06	EPOCHS : 100
+OPTIMIZER : Rprop (
+Parameter Group 0
+    etas: (0.5, 1.2)
+    lr: 2.267723980051555e-06
+    step_sizes: (1e-06, 50)
+)
+SCORE : 0.9994608888888887
+MEAN ACCURACY : 0.9994626666666664
+MEAN PRECISION : 0.9994626666666664
+BEST ACCURACY : 0.99948
+WORST ACCURACY  : 0.99944
+BEST PRECISION  : 0.99948
+WORST PRECISION : 0.99944
+
+
+	MODEL
+Sequential(
+  (0): Linear(in_features=30, out_features=120, bias=True)
+  (1): ReLU()
+  (2): Linear(in_features=120, out_features=188, bias=True)
+  (3): Tanh()
+  (4): Linear(in_features=188, out_features=158, bias=True)
+  (5): LeakyReLU(negative_slope=0.01)
+  (6): Linear(in_features=158, out_features=182, bias=True)
+  (7): Tanh()
+  (8): Linear(in_features=182, out_features=167, bias=True)
+  (9): ReLU()
+  (10): Linear(in_features=167, out_features=1, bias=True)
+  (11): Sigmoid()
+)LEARNING RATE : 4.976970296595254e-06	EPOCHS : 100
+OPTIMIZER : LBFGS (
+Parameter Group 0
+    history_size: 100
+    line_search_fn: None
+    lr: 4.976970296595254e-06
+    max_eval: 25
+    max_iter: 20
+    tolerance_change: 1e-09
+    tolerance_grad: 1e-05
+)
+SCORE : 0.0011499999999999998
+MEAN ACCURACY : 0.0011499999999999995
+MEAN PRECISION : 0.0011499999999999995
+BEST ACCURACY : 0.00115
+WORST ACCURACY  : 0.00115
+BEST PRECISION  : 0.00115
+WORST PRECISION : 0.00115
+
+
+	MODEL
+Sequential(
+  (0): Linear(in_features=30, out_features=199, bias=True)
+  (1): LeakyReLU(negative_slope=0.01)
+  (2): Linear(in_features=199, out_features=3, bias=True)
+  (3): ReLU()
+  (4): Linear(in_features=3, out_features=29, bias=True)
+  (5): Sigmoid()
+  (6): Linear(in_features=29, out_features=1, bias=True)
+  (7): Sigmoid()
+)LEARNING RATE : 3.0460611015874916e-07	EPOCHS : 100
+OPTIMIZER : Rprop (
+Parameter Group 0
+    etas: (0.5, 1.2)
+    lr: 3.0460611015874916e-07
+    step_sizes: (1e-06, 50)
+)
+SCORE : 0.9994388888888888
+MEAN ACCURACY : 0.9994466666666665
+MEAN PRECISION : 0.9994466666666665
+BEST ACCURACY : 0.99947
+WORST ACCURACY  : 0.9994
+BEST PRECISION  : 0.99947
+WORST PRECISION : 0.9994
+
+
+	MODEL
+Sequential(
+  (0): Linear(in_features=30, out_features=142, bias=True)
+  (1): Tanh()
+  (2): Linear(in_features=142, out_features=7, bias=True)
+  (3): LeakyReLU(negative_slope=0.01)
+  (4): Linear(in_features=7, out_features=63, bias=True)
+  (5): Sigmoid()
+  (6): Linear(in_features=63, out_features=195, bias=True)
+  (7): LeakyReLU(negative_slope=0.01)
+  (8): Linear(in_features=195, out_features=193, bias=True)
+  (9): LeakyReLU(negative_slope=0.01)
+  (10): Linear(in_features=193, out_features=18, bias=True)
+  (11): ReLU()
+  (12): Linear(in_features=18, out_features=145, bias=True)
+  (13): Sigmoid()
+  (14): Linear(in_features=145, out_features=50, bias=True)
+  (15): Sigmoid()
+  (16): Linear(in_features=50, out_features=180, bias=True)
+  (17): ReLU()
+  (18): Linear(in_features=180, out_features=14, bias=True)
+  (19): ReLU()
+  (20): Linear(in_features=14, out_features=155, bias=True)
+  (21): ReLU()
+  (22): Linear(in_features=155, out_features=49, bias=True)
+  (23): ReLU()
+  (24): Linear(in_features=49, out_features=74, bias=True)
+  (25): LeakyReLU(negative_slope=0.01)
+  (26): Linear(in_features=74, out_features=1, bias=True)
+  (27): Sigmoid()
+)LEARNING RATE : 6.578290432634513e-06	EPOCHS : 100
+OPTIMIZER : LBFGS (
+Parameter Group 0
+    history_size: 100
+    line_search_fn: None
+    lr: 6.578290432634513e-06
+    max_eval: 25
+    max_iter: 20
+    tolerance_change: 1e-09
+    tolerance_grad: 1e-05
+)
+SCORE : 0.9988500000000001
+MEAN ACCURACY : 0.9988500000000002
+MEAN PRECISION : 0.9988500000000002
+BEST ACCURACY : 0.99885
+WORST ACCURACY  : 0.99885
+BEST PRECISION  : 0.99885
+WORST PRECISION : 0.99885
+
+
+	MODEL
+Sequential(
+  (0): Linear(in_features=30, out_features=175, bias=True)
+  (1): Sigmoid()
+  (2): Linear(in_features=175, out_features=136, bias=True)
+  (3): Tanh()
+  (4): Linear(in_features=136, out_features=29, bias=True)
+  (5): Sigmoid()
+  (6): Linear(in_features=29, out_features=171, bias=True)
+  (7): Sigmoid()
+  (8): Linear(in_features=171, out_features=167, bias=True)
+  (9): Sigmoid()
+  (10): Linear(in_features=167, out_features=64, bias=True)
+  (11): Tanh()
+  (12): Linear(in_features=64, out_features=103, bias=True)
+  (13): ReLU()
+  (14): Linear(in_features=103, out_features=162, bias=True)
+  (15): Sigmoid()
+  (16): Linear(in_features=162, out_features=174, bias=True)
+  (17): Sigmoid()
+  (18): Linear(in_features=174, out_features=111, bias=True)
+  (19): ReLU()
+  (20): Linear(in_features=111, out_features=15, bias=True)
+  (21): LeakyReLU(negative_slope=0.01)
+  (22): Linear(in_features=15, out_features=1, bias=True)
+  (23): Sigmoid()
+)LEARNING RATE : 9.585171234706372e-06	EPOCHS : 100
+OPTIMIZER : SGD (
+Parameter Group 0
+    dampening: 0
+    lr: 9.585171234706372e-06
+    momentum: 0
+    nesterov: False
+    weight_decay: 0
+)
+SCORE : 0.6551977777777779
+MEAN ACCURACY : 0.9655933333333334
+MEAN PRECISION : 0.9655933333333334
+BEST ACCURACY : 0.99885
+WORST ACCURACY  : 0.00115
+BEST PRECISION  : 0.99885
+WORST PRECISION : 0.00115
+
+
+	MODEL
+Sequential(
+  (0): Linear(in_features=30, out_features=153, bias=True)
+  (1): ReLU()
+  (2): Linear(in_features=153, out_features=16, bias=True)
+  (3): LeakyReLU(negative_slope=0.01)
+  (4): Linear(in_features=16, out_features=105, bias=True)
+  (5): ReLU()
+  (6): Linear(in_features=105, out_features=149, bias=True)
+  (7): Sigmoid()
+  (8): Linear(in_features=149, out_features=25, bias=True)
+  (9): ReLU()
+  (10): Linear(in_features=25, out_features=82, bias=True)
+  (11): Tanh()
+  (12): Linear(in_features=82, out_features=26, bias=True)
+  (13): Sigmoid()
+  (14): Linear(in_features=26, out_features=93, bias=True)
+  (15): Tanh()
+  (16): Linear(in_features=93, out_features=175, bias=True)
+  (17): ReLU()
+  (18): Linear(in_features=175, out_features=107, bias=True)
+  (19): Sigmoid()
+  (20): Linear(in_features=107, out_features=107, bias=True)
+  (21): ReLU()
+  (22): Linear(in_features=107, out_features=19, bias=True)
+  (23): Tanh()
+  (24): Linear(in_features=19, out_features=14, bias=True)
+  (25): LeakyReLU(negative_slope=0.01)
+  (26): Linear(in_features=14, out_features=139, bias=True)
+  (27): ReLU()
+  (28): Linear(in_features=139, out_features=114, bias=True)
+  (29): ReLU()
+  (30): Linear(in_features=114, out_features=9, bias=True)
+  (31): ReLU()
+  (32): Linear(in_features=9, out_features=51, bias=True)
+  (33): LeakyReLU(negative_slope=0.01)
+  (34): Linear(in_features=51, out_features=19, bias=True)
+  (35): LeakyReLU(negative_slope=0.01)
+  (36): Linear(in_features=19, out_features=119, bias=True)
+  (37): LeakyReLU(negative_slope=0.01)
+  (38): Linear(in_features=119, out_features=1, bias=True)
+  (39): Sigmoid()
+)LEARNING RATE : 4.177315715553602e-07	EPOCHS : 100
+OPTIMIZER : Rprop (
+Parameter Group 0
+    etas: (0.5, 1.2)
+    lr: 4.177315715553602e-07
+    step_sizes: (1e-06, 50)
+)
+SCORE : 0.9993068888888889
+MEAN ACCURACY : 0.9993706666666665
+MEAN PRECISION : 0.9993706666666665
+BEST ACCURACY : 0.99945
+WORST ACCURACY  : 0.9991
+BEST PRECISION  : 0.99945
+WORST PRECISION : 0.9991
+
+
+	MODEL
+Sequential(
+  (0): Linear(in_features=30, out_features=8, bias=True)
+  (1): LeakyReLU(negative_slope=0.01)
+  (2): Linear(in_features=8, out_features=7, bias=True)
+  (3): Tanh()
+  (4): Linear(in_features=7, out_features=6, bias=True)
+  (5): LeakyReLU(negative_slope=0.01)
+  (6): Linear(in_features=6, out_features=149, bias=True)
+  (7): Sigmoid()
+  (8): Linear(in_features=149, out_features=184, bias=True)
+  (9): ReLU()
+  (10): Linear(in_features=184, out_features=82, bias=True)
+  (11): Tanh()
+  (12): Linear(in_features=82, out_features=95, bias=True)
+  (13): Sigmoid()
+  (14): Linear(in_features=95, out_features=42, bias=True)
+  (15): Sigmoid()
+  (16): Linear(in_features=42, out_features=175, bias=True)
+  (17): ReLU()
+  (18): Linear(in_features=175, out_features=107, bias=True)
+  (19): Sigmoid()
+  (20): Linear(in_features=107, out_features=107, bias=True)
+  (21): ReLU()
+  (22): Linear(in_features=107, out_features=19, bias=True)
+  (23): Tanh()
+  (24): Linear(in_features=19, out_features=14, bias=True)
+  (25): LeakyReLU(negative_slope=0.01)
+  (26): Linear(in_features=14, out_features=139, bias=True)
+  (27): ReLU()
+  (28): Linear(in_features=139, out_features=114, bias=True)
+  (29): ReLU()
+  (30): Linear(in_features=114, out_features=9, bias=True)
+  (31): ReLU()
+  (32): Linear(in_features=9, out_features=51, bias=True)
+  (33): LeakyReLU(negative_slope=0.01)
+  (34): Linear(in_features=51, out_features=19, bias=True)
+  (35): LeakyReLU(negative_slope=0.01)
+  (36): Linear(in_features=19, out_features=119, bias=True)
+  (37): LeakyReLU(negative_slope=0.01)
+  (38): Linear(in_features=119, out_features=1, bias=True)
+  (39): Sigmoid()
+)LEARNING RATE : 4.177315715553602e-07	EPOCHS : 100
+OPTIMIZER : LBFGS (
+Parameter Group 0
+    history_size: 100
+    line_search_fn: None
+    lr: 4.177315715553602e-07
+    max_eval: 25
+    max_iter: 20
+    tolerance_change: 1e-09
+    tolerance_grad: 1e-05
+)
+SCORE : 0.0011499999999999998
+MEAN ACCURACY : 0.0011499999999999995
+MEAN PRECISION : 0.0011499999999999995
+BEST ACCURACY : 0.00115
+WORST ACCURACY  : 0.00115
+BEST PRECISION  : 0.00115
+WORST PRECISION : 0.00115
+
+
+	MODEL
+Sequential(
+  (0): Linear(in_features=30, out_features=8, bias=True)
+  (1): LeakyReLU(negative_slope=0.01)
+  (2): Linear(in_features=8, out_features=182, bias=True)
+  (3): LeakyReLU(negative_slope=0.01)
+  (4): Linear(in_features=182, out_features=37, bias=True)
+  (5): ReLU()
+  (6): Linear(in_features=37, out_features=149, bias=True)
+  (7): Sigmoid()
+  (8): Linear(in_features=149, out_features=184, bias=True)
+  (9): ReLU()
+  (10): Linear(in_features=184, out_features=82, bias=True)
+  (11): Tanh()
+  (12): Linear(in_features=82, out_features=95, bias=True)
+  (13): Sigmoid()
+  (14): Linear(in_features=95, out_features=42, bias=True)
+  (15): Sigmoid()
+  (16): Linear(in_features=42, out_features=175, bias=True)
+  (17): ReLU()
+  (18): Linear(in_features=175, out_features=107, bias=True)
+  (19): Sigmoid()
+  (20): Linear(in_features=107, out_features=107, bias=True)
+  (21): ReLU()
+  (22): Linear(in_features=107, out_features=19, bias=True)
+  (23): Tanh()
+  (24): Linear(in_features=19, out_features=14, bias=True)
+  (25): LeakyReLU(negative_slope=0.01)
+  (26): Linear(in_features=14, out_features=139, bias=True)
+  (27): ReLU()
+  (28): Linear(in_features=139, out_features=114, bias=True)
+  (29): ReLU()
+  (30): Linear(in_features=114, out_features=9, bias=True)
+  (31): ReLU()
+  (32): Linear(in_features=9, out_features=51, bias=True)
+  (33): LeakyReLU(negative_slope=0.01)
+  (34): Linear(in_features=51, out_features=19, bias=True)
+  (35): LeakyReLU(negative_slope=0.01)
+  (36): Linear(in_features=19, out_features=119, bias=True)
+  (37): LeakyReLU(negative_slope=0.01)
+  (38): Linear(in_features=119, out_features=1, bias=True)
+  (39): Sigmoid()
+)LEARNING RATE : 9.796979886840408e-06	EPOCHS : 100
+OPTIMIZER : LBFGS (
+Parameter Group 0
+    history_size: 100
+    line_search_fn: None
+    lr: 9.796979886840408e-06
+    max_eval: 25
+    max_iter: 20
+    tolerance_change: 1e-09
+    tolerance_grad: 1e-05
+)
+SCORE : 0.9988500000000001
+MEAN ACCURACY : 0.9988500000000002
+MEAN PRECISION : 0.9988500000000002
+BEST ACCURACY : 0.99885
+WORST ACCURACY  : 0.99885
+BEST PRECISION  : 0.99885
+WORST PRECISION : 0.99885
+
+
+	MODEL
+Sequential(
+  (0): Linear(in_features=30, out_features=120, bias=True)
+  (1): ReLU()
+  (2): Linear(in_features=120, out_features=188, bias=True)
+  (3): Tanh()
+  (4): Linear(in_features=188, out_features=158, bias=True)
+  (5): Tanh()
+  (6): Linear(in_features=158, out_features=182, bias=True)
+  (7): Tanh()
+  (8): Linear(in_features=182, out_features=167, bias=True)
+  (9): ReLU()
+  (10): Linear(in_features=167, out_features=1, bias=True)
+  (11): Sigmoid()
+)LEARNING RATE : 4.976970296595254e-06	EPOCHS : 100
+OPTIMIZER : LBFGS (
+Parameter Group 0
+    history_size: 100
+    line_search_fn: None
+    lr: 4.976970296595254e-06
+    max_eval: 25
+    max_iter: 20
+    tolerance_change: 1e-09
+    tolerance_grad: 1e-05
+)
+SCORE : 0.0011499999999999998
+MEAN ACCURACY : 0.0011499999999999995
+MEAN PRECISION : 0.0011499999999999995
+BEST ACCURACY : 0.00115
+WORST ACCURACY  : 0.00115
+BEST PRECISION  : 0.00115
+WORST PRECISION : 0.00115
+
