@@ -1,0 +1,8 @@
+Police Titres:Times New Roman
+Police texte:Calibri
+Couleurs:
+rouge:#ee1718
+noir
+blanc
+gris clair:#f2f3f5
+gris foncé: #929294
