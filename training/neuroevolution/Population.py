@@ -5,7 +5,7 @@ import torch
 
 class Population():
     def __init__(self):
-        self.sizepop = 2
+        self.sizepop = 20
         self.datafile = "path" 
         self.people = []
         
@@ -95,7 +95,7 @@ class Population():
 
     def learning(self):
         found = False
-        max_iterations = 100
+        max_iterations = 3
         self.people = self.generate()
         i=0
         while i<max_iterations:
@@ -118,8 +118,8 @@ class Population():
                     representation_activs.append("sigmoid")
                 else:
                     representation_activs.append(random.choice(["relu","sigmoid","tanh","lrelu"]))
-
-            pop.append(Comrad(representation, representation_activs, learning_rate, self.D_in, self.D_out))
+            optim = random.choice(["lbfg","rp","sgd","adam"])
+            pop.append(Comrad(representation, representation_activs, learning_rate, optim,self.D_in, self.D_out))
         return pop
 
     def selection(self):

@@ -6,7 +6,7 @@ from numpy import random
 from random import choice
 
 class Comrad():
-    def __init__(self, representation, representation_activs, learning_rate, din, dout):
+    def __init__(self, representation, representation_activs, learning_rate, optim, din, dout):
         self.nbrlayers = 1
         self.layers= []
         self.score= 0
@@ -16,6 +16,7 @@ class Comrad():
         self.learning_rate = learning_rate
         self.accuracies = []
         self.precisions = []
+        
         self.D_in = din # Input Dimension
         self.D_out= dout # Output Dimension
         modules = []
@@ -30,7 +31,7 @@ class Comrad():
                 modules.append(nn.Linear(representation[i-1], self.D_out))
             else:
                 modules.append(nn.Linear(representation[i-1], representation[i]))
-
+            
 
             if self.representation_activs[i]=='relu':
                 modules.append(nn.ReLU())
@@ -42,14 +43,25 @@ class Comrad():
                 modules.append(nn.LeakyReLU())           # Leaky relu
             count+=1
         self.model = nn.Sequential(*modules)
-
         
+        if optim=="lbfg":
+            optimizer = torch.optim.LBFGS(self.model.parameters(), lr=self.learning_rate)
+        elif optim=="rp":
+            optimizer = torch.optim.Rprop(self.model.parameters(), lr=self.learning_rate)
+        elif optim=="sgd":
+            optimizer = torch.optim.SGD(self.model.parameters(), lr=self.learning_rate)
+        else:
+            optimizer = torch.optim.Adam(self.model.parameters(), lr=self.learning_rate)
+        
+        self.optimizer = optimizer
+        self.optim = optim
         
     def mutate(self):
         self.score = 0
-        cho = choice([0,1,2])
+        cho = choice([0,1,2,3])
         rep_activs = self.representation_activs
         rep = self.representation
+        optim = self.optim
         learning_rate = self.learning_rate
         if cho==0:
             index = random.randint(0,len(rep)-1)
@@ -57,36 +69,52 @@ class Comrad():
         if cho==1:
             index = random.randint(0,len(rep_activs)-1)
             rep_activs[index] = choice(["relu","sigmoid","tanh","lrelu"]) 
+        if cho==2:
+            optim = choice(["lbfg","rp","sgd","adam"])
+
         else:
             learning_rate = random.uniform(1e-5,1e-8)
 
         
-        self = Comrad(rep, rep_activs, learning_rate,self.D_in, self.D_out)
-    
+        self = Comrad(rep, rep_activs, learning_rate, optim, self.D_in, self.D_out)
+        
     def crossover(self, comrad):
         pick = []
         pick.append(len(self.representation))
         pick.append(len(comrad.representation))
+        #print("pick  :"+str(pick))
         size = choice(pick)
         newrep = []
         newrep_activs = []
+        #print("size : "+str(size))
         for i in range(size):
             pick = []
             pick_act = []
-            try:
-                cho = random.choice([0,1])
-                if cho==0:
+
+            cho = random.choice([0,1])
+            if cho==0:
+                if i<len(self.representation):
                     newrep.append(self.representation[i])
                     newrep_activs.append(self.representation_activs[i])
                 else:
                     newrep.append(comrad.representation[i])
                     newrep_activs.append(comrad.representation_activs[i])
-            except:
-                cho = random.randint(1,200)
-                newrep.append(cho)
-                newrep_activs.append("relu")
+            else:
+                if i<len(comrad.representation):
+                    newrep.append(comrad.representation[i])
+                    newrep_activs.append(comrad.representation_activs[i])
+                else:
+                    newrep.append(self.representation[i])
+                    newrep_activs.append(self.representation_activs[i])
+            cho = random.randint(1,200)
+        del newrep_activs[-1]
+        newrep_activs.append("sigmoid")
         l = choice([self.learning_rate, comrad.learning_rate])
-        return Comrad(newrep, newrep_activs, l,self.D_in, self.D_out)
+        opt = choice([self.optim, comrad.optim])
+        #print("new size : "+str((len(newrep))))
+        c = Comrad(newrep, newrep_activs, l, opt,self.D_in, self.D_out)
+
+        return c
 
     def test(self, testX, testY):
         from sklearn.metrics import accuracy_score, precision_score
@@ -111,12 +139,15 @@ class Comrad():
         
 
     def learn(self, learnX, learnY, testX, testY, ntrain):
+        
         print("\n\n"+str(self.model)+"\n")
+        print("Optimizer : "+str(self.optimizer))
+        print("Learning Rate : "+str(self.learning_rate))
         for traini in range(ntrain):
             
 
             N = 32 # Batch Size
-            epochs = 10
+            epochs = 100
 
             self.model.train()
 
@@ -126,6 +157,7 @@ class Comrad():
             for t in range(epochs):
                 #print("Epoch ("+str(t+1)+"/"+str(epochs)+")")
                 for i in range(0, int(size/N)):
+                        self.optimizer.zero_grad()
                         batchX, batchY = learnX[i*N:(i*N)+N], learnY[i*N:(i*N)+N]
                         batchX = batchX.resize_(N, self.D_in)  #.to_numpy()#.resize_(N, D_in)
                         batchY = batchY.resize_(N, self.D_out)   #.to_numpy()#.resize_(N, D_out)
@@ -134,14 +166,15 @@ class Comrad():
                         
 
                         loss = loss_fn(y_pred, batchY)
-                        #if t==0:
-                        #    print("Loss : "+str(loss))
-                        self.model.zero_grad()
+                        
                         loss.backward()
-
+                        def closure():
+                            return loss
                         with torch.no_grad():
-                            for param in self.model.parameters():
-                                param.data -= self.learning_rate * param.grad
+                            if self.optim=="lbfg":
+                                self.optimizer.step(closure)
+                            else:
+                                self.optimizer.step()
             self.test(testX, testY)
         import numpy as np
         self.mean_accuracy = np.mean(self.accuracies)
@@ -159,12 +192,15 @@ class Comrad():
         print("BEST PRECISION  : "+str(self.best_precision))
         print("WORST PRECISION : "+str(self.worst_precision))
         self.track()
+        
     def track(self):
         f = open("stat","a+")
         f.write("\n\tMODEL\n")
         f.write(str(self.model))
         f.write("LEARNING RATE : "+str(self.learning_rate)+'\t')
+        
         f.write("EPOCHS : "+str(self.epochs)+'\n')
+        f.write("OPTIMIZER : "+str(self.optimizer)+"\n")
         f.write("SCORE : "+str(self.score)+'\n')
         f.write("MEAN ACCURACY : "+str(self.mean_accuracy)+'\n')
         f.write("MEAN PRECISION : "+str(self.mean_precision)+'\n')
@@ -174,4 +210,4 @@ class Comrad():
         f.write("WORST PRECISION : "+str(self.worst_precision)+'\n\n')
             
     def save(self):
-        torch.save(self.model, "../models/objectivity_model")
+        torch.save(self.model, "../models/model-objectivity.pickle")
