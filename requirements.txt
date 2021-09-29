@@ -6,7 +6,7 @@ jdcal==1.4.1
 joblib==0.13.2
 lxml==4.3.4
 newsapi-python==0.2.5
-nltk==3.4.3
+nltk==3.6.3
 numpy==1.16.4
 openpyxl==2.6.2
 pandas==0.24.2
