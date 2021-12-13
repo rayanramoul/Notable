@@ -4,7 +4,7 @@ et-xmlfile==1.0.1
 idna==2.8
 jdcal==1.4.1
 joblib==0.13.2
-lxml==4.3.4
+lxml==4.6.5
 newsapi-python==0.2.5
 nltk==3.4.3
 numpy==1.16.4
