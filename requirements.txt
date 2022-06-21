@@ -7,7 +7,7 @@ joblib==0.13.2
 lxml==4.3.4
 newsapi-python==0.2.5
 nltk==3.4.3
-numpy==1.16.4
+numpy==1.22.0
 openpyxl==2.6.2
 pandas==0.24.2
 Pillow==6.0.0
