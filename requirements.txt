@@ -3,7 +3,7 @@ chardet==3.0.4
 et-xmlfile==1.0.1
 idna==2.8
 jdcal==1.4.1
-joblib==0.13.2
+joblib==1.2.0
 lxml==4.3.4
 newsapi-python==0.2.5
 nltk==3.4.3
